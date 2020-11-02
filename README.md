@@ -2,6 +2,11 @@
 
 A new Flutter project.
 
+## Login
+Les identifiants de connexion sont :
+- email : email@ynov.com
+- password : test
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.

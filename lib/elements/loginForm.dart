@@ -113,12 +113,17 @@ class _LoginFormState extends State<LoginForm> {
                 // Check credentials
                 if (emailController.text != 'email@ynov.com' || passwordController.text != 'test') {
                   // Wrong credentials
-                  this.wrongCredentials = true;
+                  print('wrong credentials');
+                  setState(() {
+                    wrongCredentials = true;
+                  });
                   return;
                 }
 
-                // TODO uncomment
-                // Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));
+                setState(() {
+                  wrongCredentials = false;
+                });
+                Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));
               }
             },
             child: Text('Submit'),
